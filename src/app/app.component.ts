@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   platformId = inject(PLATFORM_ID);
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
-      window.location.href = 'https://w.app/0txo7q';
+      window.location.href = 'http://98.84.58.154/moodle';
     }
   }
 }
