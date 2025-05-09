@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -8,6 +9,11 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'direccionamiento-2';
+export class AppComponent implements OnInit {
+  platformId = inject(PLATFORM_ID);
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      window.location.href = 'https://w.app/0txo7q';
+    }
+  }
 }
